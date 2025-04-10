@@ -1,0 +1,83 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-inline: 5%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-weight: lighter;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.container1>h2 {
+  background-color: rgb(179, 81, 229);
+  box-shadow: 1px 2px 2px 2px rgb(179, 81, 229);
+}
+
+.container2>h2 {
+  background-color: rgb(172, 61, 61);
+  box-shadow: 1px 1px 2px 2px rgb(172, 61, 61);
+}
+
+.container3>h2 {
+  background-color: rgb(96, 195, 39);
+  box-shadow: 1px 1px 2px 2px rgb(96, 195, 39);
+}
+
+ul {
+  list-style-type: none;
+  padding: unset;
+  font-weight: lighter;
+}
+
+ul li::before {
+  position: absolute;
+  content: "\2713";
+  padding: 5px;
+  left: 0;
+  top: 0;
+}
+
+ul li {
+  padding-top: 5px;
+  position: relative;
+  padding-left: 29px;
+}
+
+.container1 > ul > li::before {
+  color: rgb(179, 81, 229);
+}
+
+.container2 > ul > li::before {
+  color: rgb(172, 61, 61);
+}
+
+.container3 > ul > li::before {
+  color: rgb(96, 195, 39);
+}
+
+
+@media (max-width: 1430px) {
+  .mainContainer {
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+  }
+}
